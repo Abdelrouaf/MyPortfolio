@@ -22,80 +22,73 @@ export default function Header() {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     };
 
-    const [data, setData] = useState(PersonalInformation);
+    const { logo } = PersonalInformation[0];
 
     return (
     
         <>
         
-        {data.map( (PersonalInformation, key) => {
-                        
-            return (
+            <header className="header">
             
-                <header className="header" key={key}>
+                <nav className={ navbarColor ? "navbar navbar-expand-md d-sm-none d-md-block bg-body-tertiary boxShadow" : "navbar navbar-expand-md d-sm-none d-md-block bg-transparent" }>
                 
-                    <nav className={ navbarColor ? "navbar navbar-expand-md d-sm-none d-md-block bg-body-tertiary boxShadow" : "navbar navbar-expand-md d-sm-none d-md-block bg-transparent" }>
+                    <div className="container">
                     
-                        <div className="container">
+                        <div className="d-flex justify-content-between align-items-center w-100">
                         
-                            <div className="d-flex justify-content-between align-items-center w-100">
+                            <div className="logo">
                             
-                                <div className="logo">
-                                
-                                    <Link className="navbar-brand" onClick={scrollToTop} to="/"><img src={PersonalInformation.logo} width={100} alt="" /></Link>
-                                
-                                </div>
+                                <Link className="navbar-brand" onClick={scrollToTop} to="/"><img src={logo} width={100} alt="" /></Link>
                             
-                                <div className="menuBtn">
-                                
-                                    {/* <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                                        <span className="navbar-toggler-icon"></span>
-                                    </button> */}
-                                
-                                </div>
+                            </div>
+                        
+                            <div className="menuBtn">
                             
-                                <div className="collapse navbar-collapse text-end justify-content-end" id="navbarSupportedContent">
+                                {/* <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                    <span className="navbar-toggler-icon"></span>
+                                </button> */}
+                            
+                            </div>
+                        
+                            <div className="collapse navbar-collapse text-end justify-content-end" id="navbarSupportedContent">
+                            
+                                <ul className="navbar-nav mb-2 mb-lg-0">
                                 
-                                    <ul className="navbar-nav mb-2 mb-lg-0">
+                                    <li className="nav-item">
                                     
-                                        <li className="nav-item">
-                                        
-                                            <Link className="nav-link" aria-current="page" to="/#brief">featured</Link>
-                                        
-                                        </li>
-                                        
-                                        <li className="nav-item">
-                                        
-                                            <Link className="nav-link" to="/#work">service</Link>
-                                        
-                                        </li>
+                                        <Link className="nav-link" aria-current="page" to="/#brief">featured</Link>
                                     
-                                        <li className="nav-item">
-                                        
-                                            <Link className="nav-link" to='/work'>work</Link>
-                                        
-                                        </li>
+                                    </li>
                                     
-                                        <li className="nav-item">
-                                        
-                                            <Link className="nav-link" to='/contact'>contact</Link>
-                                        
-                                        </li>
+                                    <li className="nav-item">
                                     
-                                    </ul>
+                                        <Link className="nav-link" to="/#work">service</Link>
+                                    
+                                    </li>
                                 
-                                </div>
+                                    <li className="nav-item">
+                                    
+                                        <Link className="nav-link" to='/work'>work</Link>
+                                    
+                                    </li>
+                                
+                                    <li className="nav-item">
+                                    
+                                        <Link className="nav-link" to='/contact'>contact</Link>
+                                    
+                                    </li>
+                                
+                                </ul>
                             
                             </div>
                         
                         </div>
                     
-                    </nav>
+                    </div>
                 
-                </header>
+                </nav>
             
-            )
-        } )}
+            </header>
         
         </>
 

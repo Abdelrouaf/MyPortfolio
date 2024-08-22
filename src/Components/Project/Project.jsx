@@ -10,7 +10,7 @@ export default function Project() {
 
     const item = Works.find(item => item.id === parseInt(id));
 
-    const [dataPersonalInformation, setDataPersonalInformation] = useState(PersonalInformation)
+    const { email, phone, whatsappURL, linkedinURL, githubURL } = PersonalInformation[0];
 
     let navigate = useNavigate();
 
@@ -74,75 +74,69 @@ export default function Project() {
                 
                 </section>
             
-            : <div className='section container'>Item not found</div>}
-            
-                {dataPersonalInformation.map( (PersonalInformation, key) => {
+                : <div className='section container'>Item not found</div>}
                     
-                    return (
+                    <section className="contact2 section d-md-block d-none">
                     
-                        <section className="contact2 section d-md-block d-none" key={key}>
+                        <div className="container">
                         
-                            <div className="container">
+                            <div className="infoTitles text-center">
+                                
+                                    <span className="headTitle">contact</span>
+                                
+                                    <h3 className="subTitle">let's discuss your <span className="changeColor">project</span> </h3>
+                                
+                                    <p className="paragraph">Let's make something new, different and more meaningful or make thing move visual or conceptual</p>
+                                
+                            </div>
+                        
+                            <div className="row justify-content-center">
                             
-                                <div className="infoTitles text-center">
+                                <div className="col-lg-4">
+                                
+                                    <div className="box linkedIn">
                                     
-                                        <span className="headTitle">contact</span>
+                                        <Link target='_blank' to={linkedinURL}>LinkedIn</Link>
                                     
-                                        <h3 className="subTitle">let's discuss your <span className="changeColor">project</span> </h3>
-                                    
-                                        <p className="paragraph">Let's make something new, different and more meaningful or make thing move visual or conceptual</p>
-                                    
+                                    </div>
+                                
                                 </div>
                             
-                                <div className="row justify-content-center">
+                                <div className="col-lg-4">
                                 
-                                    <div className="col-lg-4">
-                                    
-                                        <div className="box linkedIn">
+                                    <div className="box github">
                                         
-                                            <Link target='_blank' to={PersonalInformation.linkedinURL}>LinkedIn</Link>
-                                        
-                                        </div>
+                                        <Link target='_blank' to={githubURL}>Github</Link>
                                     
                                     </div>
                                 
-                                    <div className="col-lg-4">
-                                    
-                                        <div className="box github">
-                                            
-                                            <Link target='_blank' to={PersonalInformation.githubURL}>Github</Link>
+                                </div>
+                            
+                                <div className="col-lg-4">
+                                
+                                    <div className="box gmail">
                                         
-                                        </div>
+                                        <Link target='_blank' to={`mailto:${email}`}>{email}</Link>
                                     
                                     </div>
                                 
-                                    <div className="col-lg-4">
-                                    
-                                        <div className="box gmail">
-                                            
-                                            <Link target='_blank' to={`mailto:${PersonalInformation.email}`}>{PersonalInformation.email}</Link>
+                                </div>
+                            
+                                <div className="col-lg-4">
+                                
+                                    <div className="box whatsapp">
                                         
-                                        </div>
+                                        <Link target='_blank' to={whatsappURL}>Whatsapp</Link>
                                     
                                     </div>
                                 
-                                    <div className="col-lg-4">
-                                    
-                                        <div className="box whatsapp">
-                                            
-                                            <Link target='_blank' to={PersonalInformation.whatsappURL}>Whatsapp</Link>
-                                        
-                                        </div>
-                                    
-                                    </div>
+                                </div>
+                            
+                                <div className="col-lg-4">
                                 
-                                    <div className="col-lg-4">
-                                    
-                                        <div className="box phone">
-                                            
-                                            <Link target='_blank' to={`tel:+${PersonalInformation.phone}`}>+{PersonalInformation.phone}</Link>
+                                    <div className="box phone">
                                         
-                                        </div>
+                                        <Link target='_blank' to={`tel:+${phone}`}>+{phone}</Link>
                                     
                                     </div>
                                 
@@ -150,14 +144,9 @@ export default function Project() {
                             
                             </div>
                         
-                        </section>
+                        </div>
                     
-                    )
-                
-                } )}
-        
-        
-            
+                    </section>
         
         </>
     

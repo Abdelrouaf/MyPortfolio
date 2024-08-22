@@ -8,7 +8,7 @@ export default function Work() {
 
     const [dataWork, setDataWork] = useState(Works);
 
-    const [dataPersonalInformation, setDataPersonalInformation] = useState(PersonalInformation);
+    const { id, logo, name, email, phone, address, profileImg, profilePic, title, brief, smallBrief, facebookURL, instagramURL, whatsappURL, linkedinURL, githubURL, skills, skillsName } = PersonalInformation[0];
 
     let navigate = useNavigate()
 
@@ -33,11 +33,9 @@ export default function Work() {
                 
                     <div className="row align-items-baseline">
                     
-                        {dataWork.map( (Works, key) => {
+                        {dataWork.map( (Works, index) =>  (
                         
-                            return (
-                        
-                                <div className="col-lg-6" key={key}>
+                                <div className="col-lg-6" key={index}>
                                 
                                     <Link to={`/project/${Works.id}`} className='view'>
                                     
@@ -59,9 +57,7 @@ export default function Work() {
                                 
                                 </div>
                         
-                            )
-                            
-                        } )}
+                            ) )}
                     
                     </div>
                 
@@ -79,85 +75,77 @@ export default function Work() {
         
             <div className='d-md-block d-none'>
             
-                {dataPersonalInformation.map( (PersonalInformation, key) => {
+                <section className="contact2 section d-md-block d-none">
                 
-                    return (
+                    <div className="container">
                     
-                        <section className="contact2 section d-md-block d-none" key={key}>
+                        <div className="infoTitles text-center">
+                            
+                                <span className="headTitle">contact</span>
+                            
+                                <h3 className="subTitle">let's discuss your <span className="changeColor">project</span> </h3>
+                            
+                                <p className="paragraph">Let's make something new, different and more meaningful or make thing move visual or conceptual</p>
+                            
+                        </div>
+                    
+                        <div className="row justify-content-center">
                         
-                            <div className="container">
+                            <div className="col-lg-4">
                             
-                                <div className="infoTitles text-center">
-                                    
-                                        <span className="headTitle">contact</span>
-                                    
-                                        <h3 className="subTitle">let's discuss your <span className="changeColor">project</span> </h3>
-                                    
-                                        <p className="paragraph">Let's make something new, different and more meaningful or make thing move visual or conceptual</p>
-                                    
-                                </div>
-                            
-                                <div className="row justify-content-center">
+                                <div className="box linkedIn">
                                 
-                                    <div className="col-lg-4">
-                                    
-                                        <div className="box linkedIn">
-                                        
-                                            <Link target='_blank' to={PersonalInformation.linkedinURL}>LinkedIn</Link>
-                                        
-                                        </div>
-                                    
-                                    </div>
-                                
-                                    <div className="col-lg-4">
-                                    
-                                        <div className="box github">
-                                            
-                                            <Link target='_blank' to={PersonalInformation.githubURL}>Github</Link>
-                                        
-                                        </div>
-                                    
-                                    </div>
-                                
-                                    <div className="col-lg-4">
-                                    
-                                        <div className="box gmail">
-                                            
-                                            <Link target='_blank' to={`mailto:${PersonalInformation.email}`}>{PersonalInformation.email}</Link>
-                                        
-                                        </div>
-                                    
-                                    </div>
-                                
-                                    <div className="col-lg-4">
-                                    
-                                        <div className="box whatsapp">
-                                            
-                                            <Link target='_blank' to={PersonalInformation.whatsappURL}>Whatsapp</Link>
-                                        
-                                        </div>
-                                    
-                                    </div>
-                                
-                                    <div className="col-lg-4">
-                                    
-                                        <div className="box phone">
-                                            
-                                            <Link target='_blank' to={`tel:+${PersonalInformation.phone}`}>+{PersonalInformation.phone}</Link>
-                                        
-                                        </div>
-                                    
-                                    </div>
+                                    <Link target='_blank' to={linkedinURL}>LinkedIn</Link>
                                 
                                 </div>
                             
                             </div>
                         
-                        </section>  
+                            <div className="col-lg-4">
+                            
+                                <div className="box github">
+                                    
+                                    <Link target='_blank' to={githubURL}>Github</Link>
+                                
+                                </div>
+                            
+                            </div>
+                        
+                            <div className="col-lg-4">
+                            
+                                <div className="box gmail">
+                                    
+                                    <Link target='_blank' to={`mailto:${email}`}>{email}</Link>
+                                
+                                </div>
+                            
+                            </div>
+                        
+                            <div className="col-lg-4">
+                            
+                                <div className="box whatsapp">
+                                    
+                                    <Link target='_blank' to={whatsappURL}>Whatsapp</Link>
+                                
+                                </div>
+                            
+                            </div>
+                        
+                            <div className="col-lg-4">
+                            
+                                <div className="box phone">
+                                    
+                                    <Link target='_blank' to={`tel:+${phone}`}>+{phone}</Link>
+                                
+                                </div>
+                            
+                            </div>
+                        
+                        </div>
                     
-                    )
+                    </div>
                 
-                } )}
+                </section>  
             
             </div>
         

@@ -12,9 +12,9 @@ import './_Home.scss'
 
 export default function Home() {
 
-    const [data, setData] = useState(PersonalInformation);
-
     const [dataWork, setDataWork] = useState(Works);
+
+    const { name, email, phone, profileImg, title, brief, smallBrief, facebookURL, whatsappURL, linkedinURL, githubURL, skills, skillsName } = PersonalInformation[0];
 
     const { hash } = useLocation();
     const sectionARef = useRef(null);
@@ -50,12 +50,6 @@ export default function Home() {
 
     return (
         <>
-        
-            {data.map( (PersonalInformation, key) => {
-                        
-                return (
-                
-                    <div key={key}>
                     
                         {/* <section className="welcome section d-none d-md-block">
                         
@@ -67,19 +61,19 @@ export default function Home() {
                             
                                         <div className="personalInformation">
                                         
-                                            <span className="title">{PersonalInformation.title}</span>
+                                            <span className="title">{title}</span>
                                         
-                                            <h4 className="name">{PersonalInformation.name}</h4>
+                                            <h4 className="name">{name}</h4>
                                         
                                             <p className="brief">
-                                                {PersonalInformation.smallBrief}
+                                                {smallBrief}
                                             </p>
                                         
                                             <div className="d-flex align-items-center gap-3">
                                             
                                                 <Link to="/work" className='primaryBtn'>explore projects</Link>
                                             
-                                                <Link target='_blank' to={PersonalInformation.whatsappURL} className='secondBtn'>contact me <i className="fa-solid fa-arrow-right-long"></i></Link>
+                                                <Link target='_blank' to={whatsappURL} className='secondBtn'>contact me <i className="fa-solid fa-arrow-right-long"></i></Link>
                                             
                                             </div>
                                         
@@ -93,7 +87,7 @@ export default function Home() {
                                         
                                             <div className="image text-center">
                                             
-                                                <img src={PersonalInformation.profileImg}  alt="" />
+                                                <img src={profileImg}  alt="" />
                                             
                                                 <div className="followSocial d-flex align-items-center">
                                             
@@ -101,11 +95,11 @@ export default function Home() {
                                                 
                                                     <div className="social d-flex gap-4 align-items-center">
                                                     
-                                                        <Link target='_blank' to={PersonalInformation.facebookURL}><i className="fa-brands fa-facebook-f"></i></Link>
+                                                        <Link target='_blank' to={facebookURL}><i className="fa-brands fa-facebook-f"></i></Link>
                                                     
-                                                        <Link target='_blank' to={PersonalInformation.githubURL}><i className="fa-brands fa-github"></i></Link>
+                                                        <Link target='_blank' to={githubURL}><i className="fa-brands fa-github"></i></Link>
                                                     
-                                                        <Link target='_blank' to={PersonalInformation.linkedinURL}><i className="fa-brands fa-linkedin-in"></i></Link>
+                                                        <Link target='_blank' to={linkedinURL}><i className="fa-brands fa-linkedin-in"></i></Link>
                                                     
                                                     </div>
                                                 
@@ -151,19 +145,19 @@ export default function Home() {
                             
                                         <div className="personalInformation">
                                         
-                                            <span className="title">{PersonalInformation.title}</span>
+                                            <span className="title">{title}</span>
                                         
-                                            <h4 className="name">{PersonalInformation.name}</h4>
+                                            <h4 className="name">{name}</h4>
                                         
                                             <p className="brief">
-                                                {PersonalInformation.smallBrief}
+                                                {smallBrief}
                                             </p>
                                         
                                             <div className="d-flex align-items-center gap-3">
                                             
                                                 <Link to="/work" className='primaryBtn'>explore projects</Link>
                                             
-                                                <Link target='_blank' to={PersonalInformation.whatsappURL} className='secondBtn'>contact me <i className="fa-solid fa-arrow-right-long"></i></Link>
+                                                <Link target='_blank' to={whatsappURL} className='secondBtn'>contact me <i className="fa-solid fa-arrow-right-long"></i></Link>
                                             
                                             </div>
                                         
@@ -177,7 +171,7 @@ export default function Home() {
                                         
                                             <div className="image text-center">
                                             
-                                                <img src={PersonalInformation.profileImg}  alt="" />
+                                                <img src={profileImg}  alt="" />
                                             
                                                 <div className="followSocial d-flex align-items-center">
                                             
@@ -185,11 +179,11 @@ export default function Home() {
                                                 
                                                     <div className="social d-flex gap-4 align-items-center">
                                                     
-                                                        <Link target='_blank' to={PersonalInformation.facebookURL}><i className="fa-brands fa-facebook-f"></i></Link>
+                                                        <Link target='_blank' to={facebookURL}><i className="fa-brands fa-facebook-f"></i></Link>
                                                     
-                                                        <Link target='_blank' to={PersonalInformation.githubURL}><i className="fa-brands fa-github"></i></Link>
+                                                        <Link target='_blank' to={githubURL}><i className="fa-brands fa-github"></i></Link>
                                                     
-                                                        <Link target='_blank' to={PersonalInformation.linkedinURL}><i className="fa-brands fa-linkedin-in"></i></Link>
+                                                        <Link target='_blank' to={linkedinURL}><i className="fa-brands fa-linkedin-in"></i></Link>
                                                     
                                                     </div>
                                                 
@@ -241,12 +235,12 @@ export default function Home() {
                                     
                                         <div className="personalInformation">
                                         
-                                            <span className="title">{PersonalInformation.title}</span>
+                                            <span className="title">{title}</span>
                                             
-                                            <h4 className="name">{PersonalInformation.name}</h4>
+                                            <h4 className="name">{name}</h4>
                                         
                                             <p className="brief">
-                                                {PersonalInformation.brief}
+                                                {brief}
                                             </p>
                                         
                                             <Link to="/work" className='primaryBtn'>explore projects</Link>
@@ -297,33 +291,24 @@ export default function Home() {
                             
                                 <div className="row justify-content-center align-items-center">
                                 
-                                    {PersonalInformation.skills.map( (skill, key) => {
-                                    
-                                        return (
-                                        
-                                            <>
+                                    {skills.map( (skill, index) => (
                                             
-                                            <div className="col-md-6 col-lg-3" key={key}>
+                                            <div className="col-md-6 col-lg-3" key={`${skill}-${index}`}>
                                     
                                                 <div className="box text-center">
                                                 
                                                     <div className="image">
                                                     
-                                                        <img src={PersonalInformation.skills[key]} width={100} alt="" />
+                                                        <img src={skill} width={100} alt={skillName[index]} />
                                                     
                                                     </div>
                                                 
-                                                    <h4 className='personalSkill'>{PersonalInformation.skillsName[key]}</h4>
+                                                    <h4 className='personalSkill'>{skillName[index]}</h4>
                                                 
                                                 </div>
                                             
                                             </div>
-                                            
-                                            </>
-                                        
-                                        )
-                                    
-                                    } )}
+                                        ) )}
                                 
                                 </div>
                             
@@ -361,33 +346,25 @@ export default function Home() {
                                     
                                         <div className="row justify-content-center align-items-center">
                                         
-                                            {PersonalInformation.skills.map( (skill, key) => {
-                                            
-                                            return (
-                                            
-                                                <>
+                                            {skills.map( (skill, index) =>  (
                                                 
-                                                <div className="col-md-6 col-lg-3" key={key}>
+                                                <div className="col-md-6 col-lg-3" key={`${skill}-${index}`}>
                                         
                                                     <div className="box text-center">
                                                     
                                                         <div className="image">
                                                         
-                                                            <img src={skill} width={100} alt="" />
+                                                            <img src={skill} width={100} alt={skillsName[index]} />
                                                         
                                                         </div>
                                                     
-                                                        <h4 className='personalSkill'>{PersonalInformation.skillsName[key]}</h4>
+                                                        <h4 className='personalSkill'>{skillsName[index]}</h4>
                                                     
                                                     </div>
                                                 
                                                 </div>
-                                                
-                                                </>
                                             
-                                            )
-                                        
-                                            } )}
+                                            ) )}
                                         
                                         </div>
                                     
@@ -438,17 +415,13 @@ export default function Home() {
                                             }}
                                             >
                                         
-                                            {dataWork.map( (Works, key) => {
-                                    
-                                                return (
+                                            {dataWork.map( (Works, index) => (
                                         
-                                                    <SplideSlide key={key}>
+                                                    <SplideSlide key={index}>
                                                         <img src={Works.image} alt={`Slide 1`} />
                                                     </SplideSlide>
                                         
-                                                )
-                                            
-                                            } )}
+                                                ) )}
                                     
                                         </Splide>
                                     
@@ -482,11 +455,9 @@ export default function Home() {
                             
                                 <div className="row justify-content-center">
                                 
-                                    {dataWork.map( (Works, key) => {
-                                        
-                                        return (
+                                    {dataWork.map( (Works) => (
                                     
-                                            <div className="col-md-6" key={key}>
+                                            <div className="col-md-6" key={Works.id}>
                                             
                                                 <Link to={`/project/${Works.id}`} className='view'>
                                                 
@@ -508,9 +479,7 @@ export default function Home() {
                                             
                                             </div>
                                     
-                                        )
-                                        
-                                    } )}
+                                        ) )}
                                 
                                 </div>
                             
@@ -538,7 +507,7 @@ export default function Home() {
                                     
                                         <div className="box linkedIn">
                                         
-                                            <Link target='_blank' to={PersonalInformation.linkedinURL}>LinkedIn</Link>
+                                            <Link target='_blank' to={linkedinURL}>LinkedIn</Link>
                                         
                                         </div>
                                     
@@ -548,7 +517,7 @@ export default function Home() {
                                     
                                         <div className="box github">
                                             
-                                            <Link target='_blank' to={PersonalInformation.githubURL}>Github</Link>
+                                            <Link target='_blank' to={githubURL}>Github</Link>
                                         
                                         </div>
                                     
@@ -558,7 +527,7 @@ export default function Home() {
                                     
                                         <div className="box gmail">
                                             
-                                            <Link target='_blank' to={`mailto:${PersonalInformation.email}`}>{PersonalInformation.email}</Link>
+                                            <Link target='_blank' to={`mailto:${email}`}>{email}</Link>
                                         
                                         </div>
                                     
@@ -568,7 +537,7 @@ export default function Home() {
                                     
                                         <div className="box whatsapp">
                                             
-                                            <Link target='_blank' to={PersonalInformation.whatsappURL}>Whatsapp</Link>
+                                            <Link target='_blank' to={whatsappURL}>Whatsapp</Link>
                                         
                                         </div>
                                     
@@ -578,7 +547,7 @@ export default function Home() {
                                     
                                         <div className="box phone">
                                             
-                                            <Link target='_blank' to={`tel:+${PersonalInformation.phone}`}>+{PersonalInformation.phone}</Link>
+                                            <Link target='_blank' to={`tel:+${phone}`}>+{phone}</Link>
                                         
                                         </div>
                                     
@@ -609,12 +578,6 @@ export default function Home() {
                             </div>
                         
                         </section>
-                    
-                    </div>
-                
-                )
-            
-            } )}
         
         </>
     )

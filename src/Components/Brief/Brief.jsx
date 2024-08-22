@@ -5,126 +5,113 @@ import { Link } from 'react-router-dom';
 
 export default function Brief() {
 
-    const [data, setData] = useState(PersonalInformation);
+    const { name, profilePic, title, brief, smallBrief } = PersonalInformation[0];
 
     return (
         
         <>
         
-            {data.map( (PersonalInformation, key) => {
-            
-                return (
+            <section className="example section d-lg-none d-sm-block">
+                
+                <div className="container">
+                
+                    <div className="row justify-content-between align-items-center">
                     
-                    <>
+                        <div className="col-lg-5">
+                        
+                            <div className="left d-none d-lg-block">
+                            
+
+                            
+                            </div>
+                        
+                        </div>
                     
-                        <section className="example section d-lg-none d-sm-block" key={key}>
+                        <div className="col-lg-7 h-100">
+                        
+                            <div className="personalInformation text-center">
                             
-                            <div className="container">
+                                <div className="image">
+                                
+                                    <img src={profilePic} alt="" />
+                                
+                                </div>
                             
-                                <div className="row justify-content-between align-items-center">
-                                
-                                    <div className="col-lg-5">
-                                    
-                                        <div className="left d-none d-lg-block">
-                                        
+                                <h4 className="name">{name}</h4>
+                            
+                                <div className="boxShadow d-md-none d-block mt-3">
+                            
+                                    <h4 className="title">{smallBrief}</h4>
 
-                                        
-                                        </div>
-                                    
-                                    </div>
+                                </div>
+                            
+                                <div className="btns d-flex gap-2 justify-content-center">
                                 
-                                    <div className="col-lg-7 h-100">
-                                    
-                                        <div className="personalInformation text-center">
-                                        
-                                            <div className="image">
-                                            
-                                                <img src={PersonalInformation.profilePic} alt="" />
-                                            
-                                            </div>
-                                        
-                                            <h4 className="name">{PersonalInformation.name}</h4>
-                                        
-                                            <div className="boxShadow d-md-none d-block mt-3">
-                                        
-                                                <h4 className="title">{PersonalInformation.smallBrief}</h4>
-
-                                            </div>
-                                        
-                                            <div className="btns d-flex gap-2 justify-content-center">
-                                            
-                                                <Link to="/navigate" className='smallScreenBtn'>Navigate</Link>
-                                            
-                                                <Link to='/contact' className='smallScreenBtn'>Next (Links)</Link>
-                                            
-                                            </div>
-                                        
-                                        </div>
-                                    
-                                    </div>
+                                    <Link to="/navigate" className='smallScreenBtn'>Navigate</Link>
+                                
+                                    <Link to='/contact' className='smallScreenBtn'>Next (Links)</Link>
                                 
                                 </div>
                             
                             </div>
                         
-                        </section>
+                        </div>
+                    
+                    </div>
+                
+                </div>
+            
+            </section>
+            
+            <section className="brief section d-none d-lg-block">
+                
+                    <div className="container">
+                    
+                        <div className="row justify-content-between align-items-center">
                         
-                        <section className="brief section d-none d-lg-block">
+                            <div className="col-lg-3">
                             
-                                <div className="container">
+                                <div className="left"></div>
+                            
+                            </div>
+                        
+                            <div className="col-lg-8 h-100">
+                            
+                                <div className="personalInformation">
                                 
-                                    <div className="row justify-content-between align-items-center">
+                                    <span className="title">{title}</span>
                                     
-                                        <div className="col-lg-3">
-                                        
-                                            <div className="left"></div>
-                                        
-                                        </div>
-                                    
-                                        <div className="col-lg-8 h-100">
-                                        
-                                            <div className="personalInformation">
-                                            
-                                                <span className="title">{PersonalInformation.title}</span>
-                                                
-                                                <h4 className="name">{PersonalInformation.name}</h4>
-                                            
-                                                <p className="brief">
-                                                    {PersonalInformation.brief}
-                                                </p>
-                                            
-                                                <Link to="/work" className='primaryBtn'>explore projects</Link>
-                                            
-                                            </div>
-                                        
-                                        </div>
-                                    
-                                        <div className="col-lg-1 d-lg-flex justify-content-end">
-                                        
-                                            <div className="slider">
-                                            
-                                                <div className="dotOne dot"></div>
-                                            
-                                                <div className="dotTwo dot"></div>
-                                            
-                                                <div className="dotThree dot"></div>
-                                            
-                                            </div>
-                                        
-                                        </div>
-                                    
-                                    </div>
+                                    <h4 className="name">{name}</h4>
+                                
+                                    <p className="brief">
+                                        {brief}
+                                    </p>
+                                
+                                    <Link to="/work" className='primaryBtn'>explore projects</Link>
                                 
                                 </div>
                             
-                        </section>
+                            </div>
+                        
+                            <div className="col-lg-1 d-lg-flex justify-content-end">
+                            
+                                <div className="slider">
+                                
+                                    <div className="dotOne dot"></div>
+                                
+                                    <div className="dotTwo dot"></div>
+                                
+                                    <div className="dotThree dot"></div>
+                                
+                                </div>
+                            
+                            </div>
+                        
+                        </div>
                     
-                    </>
-                )
-            
-            } )}
-        
-            
+                    </div>
+                
+            </section>
         
         </>
     

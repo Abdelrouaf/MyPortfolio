@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom'
 import pageNotFound from '../../images/error2.png'
 import './_NotFound.scss'
 
-
 export default function NotFound() {
 
     return (
