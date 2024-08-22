@@ -1,0 +1,621 @@
+import React, { useEffect, useRef, useState } from 'react'
+import { Splide, SplideSlide } from '@splidejs/react-splide';
+import '@splidejs/splide/css'; 
+import shapeOne from '../../images/shape-1.png'
+import shapeTwo from '../../images/shape-2.png'
+import shapeThree from '../../images/shape-3.png'
+import PersonalInformation from '../Apis/PersonalInformation.json'
+import Works from '../Apis/Works.json'
+import "../Work/_Work.scss"
+import { Link, useLocation } from 'react-router-dom'
+import './_Home.scss'
+
+export default function Home() {
+
+    const [data, setData] = useState(PersonalInformation);
+
+    const [dataWork, setDataWork] = useState(Works);
+
+    const { hash } = useLocation();
+    const sectionARef = useRef(null);
+    const sectionBRef = useRef(null);
+
+    useEffect(() => {
+        if (hash === '#brief' && sectionARef.current) {
+        sectionARef.current.scrollIntoView({ behavior: 'smooth' });
+        }
+        if (hash === '#work' && sectionBRef.current) {
+        sectionBRef.current.scrollIntoView({ behavior: 'smooth' });
+        }
+    }, [hash]);
+
+    // To make first section take margin top 
+    useEffect(() => {
+        const sections = document.querySelectorAll('section');
+        let firstVisibleSection = null;
+    
+        // Loop through sections to find the first visible one
+        sections.forEach((section) => {
+            const isHidden = window.getComputedStyle(section).display === 'none';
+            if (!isHidden && firstVisibleSection) {
+                firstVisibleSection = section;
+            }
+        });
+        
+            // Apply margin to the first visible section
+            if (firstVisibleSection) {
+            firstVisibleSection.style.paddingTop = '100px';
+            }
+        }, []);
+
+    return (
+        <>
+        
+            {data.map( (PersonalInformation, key) => {
+                        
+                return (
+                
+                    <div key={key}>
+                    
+                        {/* <section className="welcome section d-none d-md-block">
+                        
+                            <div className="container">
+                            
+                                <div className="row align-items-center justify-content-between">
+                                
+                                    <div className="col-md-6">
+                            
+                                        <div className="personalInformation">
+                                        
+                                            <span className="title">{PersonalInformation.title}</span>
+                                        
+                                            <h4 className="name">{PersonalInformation.name}</h4>
+                                        
+                                            <p className="brief">
+                                                {PersonalInformation.smallBrief}
+                                            </p>
+                                        
+                                            <div className="d-flex align-items-center gap-3">
+                                            
+                                                <Link to="/work" className='primaryBtn'>explore projects</Link>
+                                            
+                                                <Link target='_blank' to={PersonalInformation.whatsappURL} className='secondBtn'>contact me <i className="fa-solid fa-arrow-right-long"></i></Link>
+                                            
+                                            </div>
+                                        
+                                        </div>
+                                    
+                                    </div>
+                                
+                                    <div className="d-none d-md-block col-md-6">
+                                    
+                                        <div className="right">
+                                        
+                                            <div className="image text-center">
+                                            
+                                                <img src={PersonalInformation.profileImg}  alt="" />
+                                            
+                                                <div className="followSocial d-flex align-items-center">
+                                            
+                                                    <h4>Follow me on: </h4>
+                                                
+                                                    <div className="social d-flex gap-4 align-items-center">
+                                                    
+                                                        <Link target='_blank' to={PersonalInformation.facebookURL}><i className="fa-brands fa-facebook-f"></i></Link>
+                                                    
+                                                        <Link target='_blank' to={PersonalInformation.githubURL}><i className="fa-brands fa-github"></i></Link>
+                                                    
+                                                        <Link target='_blank' to={PersonalInformation.linkedinURL}><i className="fa-brands fa-linkedin-in"></i></Link>
+                                                    
+                                                    </div>
+                                                
+                                                </div>
+                                            
+                                            </div>
+                                        
+                                        </div>
+                                    
+                                    </div>
+                                
+                                    <div className="shapeOne shape">
+                                    
+                                        <img src={shapeOne} alt="" />
+                                    
+                                    </div>
+                                
+                                    <div className="shapeTwo shape">
+                                    
+                                        <img src={shapeTwo} alt="" />
+                                    
+                                    </div>
+                                
+                                    <div className="shapeThree shape">
+                                    
+                                        <img src={shapeThree} alt="" />
+                                    
+                                    </div>
+                                
+                                </div>
+                            
+                            </div>
+                        
+                        </section> */}
+                    
+                        <section className="welcome2 section d-none d-md-block">
+                        
+                            <div className="container">
+                            
+                                <div className="row align-items-center justify-content-between">
+                                
+                                    <div className="col-md-6">
+                            
+                                        <div className="personalInformation">
+                                        
+                                            <span className="title">{PersonalInformation.title}</span>
+                                        
+                                            <h4 className="name">{PersonalInformation.name}</h4>
+                                        
+                                            <p className="brief">
+                                                {PersonalInformation.smallBrief}
+                                            </p>
+                                        
+                                            <div className="d-flex align-items-center gap-3">
+                                            
+                                                <Link to="/work" className='primaryBtn'>explore projects</Link>
+                                            
+                                                <Link target='_blank' to={PersonalInformation.whatsappURL} className='secondBtn'>contact me <i className="fa-solid fa-arrow-right-long"></i></Link>
+                                            
+                                            </div>
+                                        
+                                        </div>
+                                    
+                                    </div>
+                                
+                                    <div className="d-none d-md-block col-md-6">
+                                    
+                                        <div className="right">
+                                        
+                                            <div className="image text-center">
+                                            
+                                                <img src={PersonalInformation.profileImg}  alt="" />
+                                            
+                                                <div className="followSocial d-flex align-items-center">
+                                            
+                                                    <h4>Follow me on: </h4>
+                                                
+                                                    <div className="social d-flex gap-4 align-items-center">
+                                                    
+                                                        <Link target='_blank' to={PersonalInformation.facebookURL}><i className="fa-brands fa-facebook-f"></i></Link>
+                                                    
+                                                        <Link target='_blank' to={PersonalInformation.githubURL}><i className="fa-brands fa-github"></i></Link>
+                                                    
+                                                        <Link target='_blank' to={PersonalInformation.linkedinURL}><i className="fa-brands fa-linkedin-in"></i></Link>
+                                                    
+                                                    </div>
+                                                
+                                                </div>
+                                            
+                                            </div>
+                                        
+                                        </div>
+                                    
+                                    </div>
+                                
+                                    <div className="shapeOne shape">
+                                    
+                                        <img src={shapeOne} alt="" />
+                                    
+                                    </div>
+                                
+                                    <div className="shapeTwo shape">
+                                    
+                                        <img src={shapeTwo} alt="" />
+                                    
+                                    </div>
+                                
+                                    <div className="shapeThree shape">
+                                    
+                                        <img src={shapeThree} alt="" />
+                                    
+                                    </div>
+                                
+                                </div>
+                            
+                            </div>
+                        
+                        </section>
+                    
+                        <section className="brief section d-none d-lg-block" ref={sectionARef} id='brief'>
+                        
+                            <div className="container">
+                            
+                                <div className="row justify-content-between align-items-center">
+                                
+                                    <div className="col-lg-3">
+                                    
+                                        <div className="left"></div>
+                                    
+                                    </div>
+                                
+                                    <div className="col-lg-8 h-100">
+                                    
+                                        <div className="personalInformation">
+                                        
+                                            <span className="title">{PersonalInformation.title}</span>
+                                            
+                                            <h4 className="name">{PersonalInformation.name}</h4>
+                                        
+                                            <p className="brief">
+                                                {PersonalInformation.brief}
+                                            </p>
+                                        
+                                            <Link to="/work" className='primaryBtn'>explore projects</Link>
+                                        
+                                        </div>
+                                    
+                                    </div>
+                                
+                                    <div className="col-lg-1 d-lg-flex justify-content-end">
+                                    
+                                        <div className="slider">
+                                        
+                                            <div className="dotOne dot"></div>
+                                        
+                                            <div className="dotTwo dot"></div>
+                                        
+                                            <div className="dotThree dot"></div>
+                                        
+                                        </div>
+                                    
+                                    </div>
+                                
+                                </div>
+                            
+                            </div>
+                        
+                        </section>
+                    
+                        {/* <section className="skills section d-md-block d-none" ref={sectionARef} id='skills'>
+                        
+                            <div className="container">
+                            
+                                <div className="infoTitles infoTitles2">
+                                
+                                    <span className="headTitle">my skills</span>
+                                
+                                    <h3 className="subTitle">Why hire me for your <span className="changeColor">project?</span> </h3>
+                                
+                                    <p className="paragraph">I create engaging and responsive user interfaces that enhance user experience and meet business objectives.</p>
+                                
+                                    <div className="btns">
+                                    
+                                        <Link to='/contact' className='primaryBtn'>hire me</Link>
+                                    
+                                    </div>
+                                
+                                </div>
+                            
+                                <div className="row justify-content-center align-items-center">
+                                
+                                    {PersonalInformation.skills.map( (skill, key) => {
+                                    
+                                        return (
+                                        
+                                            <>
+                                            
+                                            <div className="col-md-6 col-lg-3" key={key}>
+                                    
+                                                <div className="box text-center">
+                                                
+                                                    <div className="image">
+                                                    
+                                                        <img src={PersonalInformation.skills[key]} width={100} alt="" />
+                                                    
+                                                    </div>
+                                                
+                                                    <h4 className='personalSkill'>{PersonalInformation.skillsName[key]}</h4>
+                                                
+                                                </div>
+                                            
+                                            </div>
+                                            
+                                            </>
+                                        
+                                        )
+                                    
+                                    } )}
+                                
+                                </div>
+                            
+                            </div>
+                        
+                        </section> */}
+                    
+                        <section className="skills section d-md-block d-none">
+                        
+                            <div className="container">
+                            
+                                <div className="row justify-content-center align-items-center">
+                                
+                                    <div className="col-lg-4">
+                                    
+                                        <div className="infoTitles">
+                                    
+                                            <span className="headTitle">my skills</span>
+                                        
+                                            <h3 className="subTitle">Why hire me for your <span className="changeColor">project?</span> </h3>
+                                        
+                                            <p className="paragraph">I create engaging and responsive user interfaces that enhance user experience and meet business objectives.</p>
+                                        
+                                            <div className="btns">
+                                            
+                                                <Link to='/contact' className='primaryBtn'>hire me</Link>
+                                            
+                                            </div>
+                                        
+                                        </div>
+                                    
+                                    </div>
+                                
+                                    <div className="col-lg-8">
+                                    
+                                        <div className="row justify-content-center align-items-center">
+                                        
+                                            {PersonalInformation.skills.map( (skill, key) => {
+                                            
+                                            return (
+                                            
+                                                <>
+                                                
+                                                <div className="col-md-6 col-lg-3" key={key}>
+                                        
+                                                    <div className="box text-center">
+                                                    
+                                                        <div className="image">
+                                                        
+                                                            <img src={skill} width={100} alt="" />
+                                                        
+                                                        </div>
+                                                    
+                                                        <h4 className='personalSkill'>{PersonalInformation.skillsName[key]}</h4>
+                                                    
+                                                    </div>
+                                                
+                                                </div>
+                                                
+                                                </>
+                                            
+                                            )
+                                        
+                                            } )}
+                                        
+                                        </div>
+                                    
+                                    </div>
+                                
+                                </div>
+                            
+                            </div>
+                        
+                        </section>
+                    
+                        {/* <section className="portfolio section d-md-block d-none" ref={sectionBRef} id='portfolio'>  
+                        
+                            <div className="container">
+                            
+                                <div className="row justify-content-center">
+                                    
+                                    <div className="col-lg-4">
+                                    
+                                        <div className="infoTitles">
+                                    
+                                            <span className="headTitle">portfolio</span>
+                                        
+                                            <h3 className="subTitle">My creative works latest <span className="changeColor">projects</span> </h3>
+                                        
+                                            <p className="paragraph">I have selected and mentioned here some of my latest projects to share with you.</p>
+                                        
+                                            <div className="btns">
+                                            
+                                                <Link to='/work' className='primaryBtn'>show more</Link>
+                                            
+                                            </div>
+                                        
+                                        </div>
+                                    
+                                    </div>
+                                
+                                    <div className="col-lg-8">
+                                    
+                                        <Splide
+                                            options={{
+                                                type: 'loop',
+                                                drag: 'free',        // Enable free dragging
+                                                freeScroll: true,    // Enable free scrolling
+                                                perPage: 3,          // Number of slides to show per page
+                                                gap: '1rem',         // Gap between slides
+                                                pagination: false,   // Disable pagination if not needed
+                                            }}
+                                            >
+                                        
+                                            {dataWork.map( (Works, key) => {
+                                    
+                                                return (
+                                        
+                                                    <SplideSlide key={key}>
+                                                        <img src={Works.image} alt={`Slide 1`} />
+                                                    </SplideSlide>
+                                        
+                                                )
+                                            
+                                            } )}
+                                    
+                                        </Splide>
+                                    
+                                    </div>
+                                
+                                </div>
+                            
+                            </div>
+                        
+                        </section> */}
+                    
+                        <section className="work section d-md-block d-none" ref={sectionBRef} id='work'>
+                        
+                            <div className="container">
+                            
+                                <div className="infoTitles">
+                                    
+                                    <span className="headTitle">portfolio</span>
+                                
+                                    <h3 className="subTitle">My creative works latest <span className="changeColor">projects</span> </h3>
+                                
+                                    <p className="paragraph">I have selected and mentioned here some of my latest projects to share with you.</p>
+                                
+                                    <div className="btns">
+                                    
+                                        <Link to='/work' className='primaryBtn'>show more</Link>
+                                    
+                                    </div>
+                                
+                                </div>
+                            
+                                <div className="row justify-content-center">
+                                
+                                    {dataWork.map( (Works, key) => {
+                                        
+                                        return (
+                                    
+                                            <div className="col-md-6" key={key}>
+                                            
+                                                <Link to={`/project/${Works.id}`} className='view'>
+                                                
+                                                    <div className="project">
+                                                    
+                                                        <div className="image">
+                                                        
+                                                            <img src={Works.imageCover} alt="" />
+                                                        
+                                                        </div>
+                                                    
+                                                        <h4 className="title">{Works.title}</h4>
+                                                    
+                                                        <h4 className="technologies">{Works.technologies}</h4>
+                                                    
+                                                    </div>
+                                                
+                                                </Link>
+                                            
+                                            </div>
+                                    
+                                        )
+                                        
+                                    } )}
+                                
+                                </div>
+                            
+                            </div>
+                    
+                        </section>
+                    
+                        <section className="contact2 section d-md-block d-none">
+                        
+                            <div className="container">
+                            
+                                <div className="infoTitles text-center">
+                                    
+                                        <span className="headTitle">contact</span>
+                                    
+                                        <h3 className="subTitle">let's discuss your <span className="changeColor">project</span> </h3>
+                                    
+                                        <p className="paragraph">Let's make something new, different and more meaningful or make thing move visual or conceptual</p>
+                                    
+                                </div>
+                            
+                                <div className="row justify-content-center">
+                                
+                                    <div className="col-lg-4">
+                                    
+                                        <div className="box linkedIn">
+                                        
+                                            <Link target='_blank' to={PersonalInformation.linkedinURL}>LinkedIn</Link>
+                                        
+                                        </div>
+                                    
+                                    </div>
+                                
+                                    <div className="col-lg-4">
+                                    
+                                        <div className="box github">
+                                            
+                                            <Link target='_blank' to={PersonalInformation.githubURL}>Github</Link>
+                                        
+                                        </div>
+                                    
+                                    </div>
+                                
+                                    <div className="col-lg-4">
+                                    
+                                        <div className="box gmail">
+                                            
+                                            <Link target='_blank' to={`mailto:${PersonalInformation.email}`}>{PersonalInformation.email}</Link>
+                                        
+                                        </div>
+                                    
+                                    </div>
+                                
+                                    <div className="col-lg-4">
+                                    
+                                        <div className="box whatsapp">
+                                            
+                                            <Link target='_blank' to={PersonalInformation.whatsappURL}>Whatsapp</Link>
+                                        
+                                        </div>
+                                    
+                                    </div>
+                                
+                                    <div className="col-lg-4">
+                                    
+                                        <div className="box phone">
+                                            
+                                            <Link target='_blank' to={`tel:+${PersonalInformation.phone}`}>+{PersonalInformation.phone}</Link>
+                                        
+                                        </div>
+                                    
+                                    </div>
+                                
+                                </div>
+                            
+                            </div>
+                        
+                        </section>
+                    
+                        <section className="welcomeScreen section d-sm-block d-md-none">
+                        
+                            <div className="container">
+                            
+                                <div className="d-flex align-items-center justify-content-center">
+                                
+                                    <div className="text-center">
+                                    
+                                        <h4>welcome</h4>
+                                    
+                                        <Link to='info' className='smallScreenBtn'>start</Link>
+                                    
+                                    </div>
+                                
+                                </div>
+                            
+                            </div>
+                        
+                        </section>
+                    
+                    </div>
+                
+                )
+            
+            } )}
+        
+        </>
+    )
+}

@@ -1,0 +1,107 @@
+[
+
+    {
+    
+        "id": 0,
+        "title": "Free Movies Online - Website Application",
+        "description": "Accessing films and TV shows via streaming services without a paid subscription. This platform allow users to view a wide variety of content, from classic movies to the latest episodes of popular TV shows. The content available on these sites can range from public domain films, independently produced content, or licensed shows offered at no cost to the viewer.",
+        "technologies": "HTML5, SCSS, Bootstrap, ReactJs, SplideJs, Axios",
+        "imageCover": "../../ProjectsImages/MovieApp3.png",
+        "image": "../../ProjectsImages/MovieApp.png",
+        "shots": [],
+        "liveDemo": ""
+    
+    },
+
+    {
+    
+        "id": 1,
+        "title": "Create Your Website - Landing Page",
+        "description": "This website allows you to create your own website is typically a website builder platform. This platform provides tools and features that make it easy for anyone, even those without technical skills, to design, build, and publish a website.",
+        "technologies": "HTML5, SCSS, Bootstrap, ReactJs",
+        "imageCover": "../../ProjectsImages/React-App3.png",
+        "image": "../../ProjectsImages/React-App2.png",
+        "shots": [],
+        "liveDemo": ""
+    
+    },
+
+    {
+    
+        "id": 2,
+        "title": "E-Commerce - Website Application",
+        "description": "This online platform allows businesses and individuals to buy products over the internet. This website serves as a digital storefronts where customers can browse a wide range of items, add them to a shopping cart, and complete purchases securely through integrated payment gateways. This website features product categories, detailed product descriptions, high-quality images, customer reviews, and various search and filter options to help users find what they're looking for. They also provide tools for managing orders, tracking shipments, and handling returns or exchanges.",
+        "technologies": "HTML5, CSS3, Bootstrap, JavaScript, WowJs",
+        "imageCover": "../../ProjectsImages/e-commerceApp2.png",
+        "image": "../../ProjectsImages/e-commerceApp4.png",
+        "shots": [],
+        "liveDemo": "https://abdelrouaf.github.io/E-commerce-Store/"
+    
+    },
+
+    {
+    
+        "id": 3,
+        "title": "Travel & explore - Website Application",
+        "description": "This is an online platform designed to inspire and assist users in planning their travel adventures. This website offers a wealth of information about various destinations around the world, including details on local attractions, accommodations, dining options, cultural experiences, and activities.This website features travel guides, itineraries, and blog posts written by travel experts or fellow travelers, providing insights and tips to help users make the most of their trips. They also include user reviews, photos, and videos to give a more immersive understanding of the destinations.",
+        "technologies": "HTML5, CSS3, Bootstrap, WowJs",
+        "imageCover": "../../ProjectsImages/BexperApp3.png",
+        "image": "../../ProjectsImages/BexperApp2.png",
+        "shots": [],
+        "liveDemo": ""
+    
+    },
+
+    {
+    
+        "id": 4,
+        "title": "Digital Marketing Website - Website Application",
+        "description": "This platform provides services and tools to help businesses promote their products or services on the internet. This website offer a range of solutions, including search engine optimization (SEO), social media marketing, email marketing, content creation, pay-per-click (PPC) advertising, and analytics.",
+        "technologies": "HTML5, SCSS, Bootstrap, WowJs",
+        "imageCover": "../../ProjectsImages/Digital-MarketingApp3.png",
+        "image": "../../ProjectsImages/Digital-MarketingApp2.png",
+        "shots": [],
+        "liveDemo": "https://abdelrouaf.github.io/Digital-Marketing/"
+    
+    },
+
+    {
+    
+        "id": 5,
+        "title": "Investments & FinTech - Landing Page",
+        "description": "This website help businesses achieve their mission by literally working on improving their success. This website is capable of delivering all services related to e-commerce.",
+        "technologies": "HTML5, CSS3, Bootstrap, WowJs",
+        "imageCover": "../../ProjectsImages/Raqamyat3.png",
+        "image": "../../ProjectsImages/Raqamyat2.png",
+        "shots": [],
+        "liveDemo": ""
+    
+    },
+
+    {
+    
+        "id": 6,
+        "title": "Portfolio - Landing Page",
+        "description": "This platform showcases an individual’s or a company’s work, skills, and achievements. It serves as a digital resume or portfolio, providing a visual and interactive way for visitors to explore the creator’s expertise, creativity, and experience. For professionals such as designers, photographers, artists, writers, developers, or freelancers, a portfolio website is essential for displaying completed projects, highlighting key skills, and demonstrating their style and capabilities. It typically includes sections like an “About Me” page, a gallery of work samples, client testimonials, and contact information.",
+        "technologies": "HTML5, CSS3",
+        "imageCover": "../../ProjectsImages/Portfolio3.png",
+        "image": "../../ProjectsImages/Portfolio2.png",
+        "shots": [],
+        "liveDemo": "https://abdelrouaf.github.io/Portfolio-Project/"
+    
+    },
+
+    {
+    
+        "id": 7,
+        "title": "Finance Consultation - Landing Page",
+        "description": "This website is an online platform that offers expert financial advice and services to individuals, businesses, or organizations. This website is designed to help users manage their finances more effectively, whether through personal financial planning, investment strategies, tax advice, or business financial management.",
+        "technologies": "HTML5, CSS3",
+        "imageCover": "../../ProjectsImages/Finance-Consultation3.png",
+        "image": "../../ProjectsImages/Finance-Consultation2.png",
+        "shots": [],
+        "liveDemo": "https://abdelrouaf.github.io/Finance-Consultation-/"
+    
+    }
+
+]

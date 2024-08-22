@@ -1,0 +1,39 @@
+@import "../Style/Base/Base";
+
+.footer {
+    margin-bottom: 25px;
+
+    .d-flex {
+        border-top: 1px solid $whiteLowOpacity;
+        padding-top: 20px;
+    
+        .designedBy {
+        
+            h4 {
+                font-size: 16px;
+            
+            }
+        
+        }
+    
+        .social {
+            display: flex;
+            gap: 10px;
+        
+            i {
+                font-size: 12px;
+                color: $whiteColor;
+                background-color: $lightBlue;
+                padding: 10px;
+                border-radius: 10px;
+                -webkit-border-radius: 10px;
+                -moz-border-radius: 10px;
+                -ms-border-radius: 10px;
+                -o-border-radius: 10px;
+}
+        
+        }
+    
+    }
+
+}

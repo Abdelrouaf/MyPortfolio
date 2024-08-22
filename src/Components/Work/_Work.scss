@@ -1,0 +1,82 @@
+@import "../Style/Base/Base";
+@import "../Style/Layout/Layout";
+
+.work {
+
+    .view {
+    
+        .project {
+    
+            .image {
+                margin-bottom: 15px;
+                overflow: hidden;
+                border: 1px solid $whiteLowOpacity;
+            
+                img {
+                    height: 300px;
+                    width: 500px;
+                    transition: all .5s;
+                    -webkit-transition: all .5s;
+                    -moz-transition: all .5s;
+                    -ms-transition: all .5s;
+                    -o-transition: all .5s;
+                
+                }
+            }
+        
+            .title {
+                color: $darkBlue;
+                font-family: $fontNunito;
+                font-weight: 700;
+                font-size: 16px;
+                position: relative;
+            
+                &::after {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    bottom: -5px;
+                    width: 0;
+                    height: 2px;
+                    background-color: $darkBlue;
+                    transition: all .5s;
+                    -webkit-transition: all .5s;
+                    -moz-transition: all .5s;
+                    -ms-transition: all .5s;
+                    -o-transition: all .5s;
+                }
+            
+            }
+        
+            .technologies {
+                font-size: 14px;
+                margin-top: 10px;
+                margin-bottom: 35px;
+                color: $gray;
+                transition: all .5s;
+                -webkit-transition: all .5s;
+                -moz-transition: all .5s;
+                -ms-transition: all .5s;
+                -o-transition: all .5s;
+            }
+        
+        }
+    
+        &:hover img{
+            transform: scale(1.05);
+            -webkit-transform: scale(1.05);
+            -moz-transform: scale(1.05);
+            -ms-transform: scale(1.05);
+            -o-transform: scale(1.05);
+        }
+    
+        &:hover .title::after {
+            width: 100%;
+        }
+    
+        &:hover .technologies {
+            color: $lightBlue;
+        }
+    
+    }
+}

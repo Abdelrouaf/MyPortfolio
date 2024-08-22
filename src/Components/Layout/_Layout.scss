@@ -1,0 +1,19 @@
+@import "../Style/Base/Base";
+@import "../Style/Layout/Layout";
+
+.centerPage {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 80%;
+    height: 80%;
+    box-shadow: rgba(14, 17, 51, 0.212) 0px 5px 60px 0px;
+    overflow-y: scroll;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    padding: 0 10px;
+    z-index: 100;
+}

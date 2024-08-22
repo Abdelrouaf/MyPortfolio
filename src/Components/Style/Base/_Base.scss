@@ -1,0 +1,58 @@
+@import '../Variables/Variables';
+
+html {
+    scroll-behavior: smooth;
+    // scrollbar-color: $BlueColor $blackColor;
+}
+
+body {
+    background-color: $whiteColor !important;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+}
+
+// ::-webkit-scrollbar {
+//     width: 10px;
+// }
+
+// ::-webkit-scrollbar-thumb {
+//     background-color: $lightBlue;
+//     border-radius: 2px;
+//     -webkit-border-radius: 2px;
+//     -moz-border-radius: 2px;
+//     -ms-border-radius: 2px;
+//     -o-border-radius: 2px;
+// }
+
+// ::-webkit-scrollbar-track {
+//     background: #000;
+//     border-radius: 2px;
+//     -webkit-border-radius: 2px;
+//     -moz-border-radius: 2px;
+//     -ms-border-radius: 2px;
+//     -o-border-radius: 2px;
+// }
+
+// ::-webkit-scrollbar-button {
+//     display: block;
+//     border-style: solid;
+//     height: 13px;
+//     width: 16px;
+//     color: $blackColor;
+//     background-color: $lightBlue;
+// }
+
+::selection {
+    background-color: rgb(15 23 42);
+    color: rgb(255 255 255);
+}
