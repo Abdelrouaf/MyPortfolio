@@ -1,9 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/splide/css'; 
-import shapeOne from '../../images/shape-1.png'
-import shapeTwo from '../../images/shape-2.png'
-import shapeThree from '../../images/shape-3.png'
 import PersonalInformation from '../Apis/PersonalInformation.json'
 import Works from '../Apis/Works.json'
 import "../Work/_Work.scss"
@@ -197,19 +194,19 @@ export default function Home() {
                                 
                                     <div className="shapeOne shape">
                                     
-                                        <img src={shapeOne} alt="" />
+                                        <img src='/images/shape-1.png' alt="" />
                                     
                                     </div>
                                 
                                     <div className="shapeTwo shape">
                                     
-                                        <img src={shapeTwo} alt="" />
+                                        <img src='/images/shape-2.png' alt="" />
                                     
                                     </div>
                                 
                                     <div className="shapeThree shape">
                                     
-                                        <img src={shapeThree} alt="" />
+                                        <img src='/images/shape-3.png' alt="" />
                                     
                                     </div>
                                 

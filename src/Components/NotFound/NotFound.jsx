@@ -1,6 +1,5 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import pageNotFound from '../../images/error2.png'
 import './_NotFound.scss'
 
 export default function NotFound() {
@@ -14,7 +13,7 @@ export default function NotFound() {
             
                 <div className="image">
                 
-                    <img src={pageNotFound} alt="" />
+                    <img src='/images/error2.png' alt="" />
                 
                 </div>
             
