@@ -13,7 +13,7 @@ export default function NotFound() {
             
                 <div className="image">
                 
-                    <img src='/public/images/error2.png' alt="" />
+                    <img src='images/error2.png' alt="" />
                 
                 </div>
             
