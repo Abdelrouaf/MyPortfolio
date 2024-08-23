@@ -9,7 +9,7 @@ export default function Header() {
     let [navbarColor, setNavbarColor] = useState(false)
 
     function changeNavbarColor () {
-        if (window.scrollY >= 90) {
+        if (window.scrollY >= 20) {
             setNavbarColor(true);
         } else {
             setNavbarColor(false);
@@ -38,10 +38,8 @@ export default function Header() {
                         
                             <div className="logo">
                             
-                                {/* <Link className="navbar-brand" onClick={scrollToTop} to="/"><img src={logo} width={100} alt="" /></Link> */}
+                                <Link className="navbar-brand" onClick={scrollToTop} to="/"><img src={logo} width={100} alt="" /></Link>
                             
-                                <Link className="navbar-brand" onClick={scrollToTop} to="/"></Link>
-
                             </div>
                         
                             <div className="menuBtn">

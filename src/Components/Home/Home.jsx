@@ -154,7 +154,7 @@ export default function Home() {
                                             
                                                 <Link to="/work" className='primaryBtn'>explore projects</Link>
                                             
-                                                <Link target='_blank' to={whatsappURL} className='secondBtn'>contact me <i className="fa-solid fa-arrow-right-long"></i></Link>
+                                                <a target='_blank' rel="noopener noreferrer" href={whatsappURL} className='secondBtn'>contact me <i className="fa-solid fa-arrow-right-long"></i></a>
                                             
                                             </div>
                                         
@@ -168,7 +168,7 @@ export default function Home() {
                                         
                                             <div className="image text-center">
                                             
-                                                {/* <img src={profileImg}  alt="" /> */}
+                                                <img src={profileImg}  alt="" />
                                             
                                                 <div className="followSocial d-flex align-items-center">
                                             
@@ -176,11 +176,11 @@ export default function Home() {
                                                 
                                                     <div className="social d-flex gap-4 align-items-center">
                                                     
-                                                        <Link target='_blank' to={facebookURL}><i className="fa-brands fa-facebook-f"></i></Link>
+                                                        <a target='_blank' rel="noopener noreferrer" href={facebookURL}><i className="fa-brands fa-facebook-f"></i></a>
                                                     
-                                                        <Link target='_blank' to={githubURL}><i className="fa-brands fa-github"></i></Link>
+                                                        <a target='_blank' rel="noopener noreferrer" href={githubURL}><i className="fa-brands fa-github"></i></a>
                                                     
-                                                        <Link target='_blank' to={linkedinURL}><i className="fa-brands fa-linkedin-in"></i></Link>
+                                                        <a target='_blank' rel="noopener noreferrer" href={linkedinURL}><i className="fa-brands fa-linkedin-in"></i></a>
                                                     
                                                     </div>
                                                 
@@ -194,19 +194,19 @@ export default function Home() {
                                 
                                     <div className="shapeOne shape">
                                     
-                                        {/* <img src='/images/shape-1.png' alt="" /> */}
+                                        <img src='/images/shape-1.png' alt="" />
                                     
                                     </div>
                                 
                                     <div className="shapeTwo shape">
                                     
-                                        {/* <img src='/images/shape-2.png' alt="" /> */}
+                                        <img src='/images/shape-2.png' alt="" />
                                     
                                     </div>
                                 
                                     <div className="shapeThree shape">
                                     
-                                        {/* <img src='/images/shape-3.png' alt="" /> */}
+                                        <img src='/images/shape-3.png' alt="" />
                                     
                                     </div>
                                 
@@ -351,7 +351,7 @@ export default function Home() {
                                                     
                                                         <div className="image">
                                                         
-                                                            {/* <img src={skill} width={100} alt={skillsName[index]} /> */}
+                                                            <img src={skill} width={100} alt={skillsName[index]} />
                                                         
                                                         </div>
                                                     
@@ -462,7 +462,7 @@ export default function Home() {
                                                     
                                                         <div className="image">
                                                         
-                                                            {/* <img src={Works.imageCover} alt="" /> */}
+                                                            <img src={Works.imageCover} alt="" />
                                                         
                                                         </div>
                                                     
@@ -485,76 +485,51 @@ export default function Home() {
                         </section>
                     
                         <section className="contact2 section d-md-block d-none">
-                        
                             <div className="container">
-                            
-                                <div className="infoTitles text-center">
-                                    
-                                        <span className="headTitle">contact</span>
-                                    
-                                        <h3 className="subTitle">let's discuss your <span className="changeColor">project</span> </h3>
-                                    
-                                        <p className="paragraph">Let's make something new, different and more meaningful or make thing move visual or conceptual</p>
-                                    
+                                <div className="infoTitles text-center d-md-block d-none">
+                                    <span className="headTitle">contact</span>
+                                    <h3 className="subTitle">let's discuss your <span className="changeColor">project</span></h3>
+                                    <p className="paragraph">Let's make something new, different and more meaningful or make things move visual or conceptual</p>
                                 </div>
-                            
+
                                 <div className="row justify-content-center">
-                                
-                                    <div className="col-lg-4">
-                                    
+                                    <div className="col-sm-6 col-lg-4">
                                         <div className="box linkedIn">
-                                        
-                                            <Link target='_blank' to={linkedinURL}>LinkedIn</Link>
-                                        
+                                            <a target='_blank' rel="noopener noreferrer" href={linkedinURL}>LinkedIn</a>
                                         </div>
-                                    
                                     </div>
-                                
-                                    <div className="col-lg-4">
-                                    
+
+                                    <div className="col-sm-6 col-lg-4">
                                         <div className="box github">
-                                            
-                                            <Link target='_blank' to={githubURL}>Github</Link>
-                                        
+                                            <a target='_blank' rel="noopener noreferrer" href={githubURL}>Github</a>
                                         </div>
-                                    
                                     </div>
-                                
-                                    <div className="col-lg-4">
-                                    
+
+                                    <div className="col-sm-6 col-lg-4">
                                         <div className="box gmail">
-                                            
-                                            <Link target='_blank' to={`mailto:${email}`}>{email}</Link>
-                                        
+                                            <a target='_blank' rel="noopener noreferrer" href={`mailto:${email}`}>{email}</a>
                                         </div>
-                                    
                                     </div>
-                                
-                                    <div className="col-lg-4">
-                                    
+
+                                    <div className="col-sm-6 col-lg-4">
                                         <div className="box whatsapp">
-                                            
-                                            <Link target='_blank' to={whatsappURL}>Whatsapp</Link>
-                                        
+                                            <a target='_blank' rel="noopener noreferrer" href={whatsappURL}>Whatsapp</a>
                                         </div>
-                                    
                                     </div>
-                                
-                                    <div className="col-lg-4">
-                                    
+
+                                    <div className="col-sm-6 col-lg-4">
                                         <div className="box phone">
-                                            
-                                            <Link target='_blank' to={`tel:+${phone}`}>+{phone}</Link>
-                                        
+                                            <a target='_blank' rel="noopener noreferrer" href={`tel:+${phone}`}>+{phone}</a>
                                         </div>
-                                    
                                     </div>
-                                
                                 </div>
-                            
+
+                                <div className="btns d-flex justify-content-center gap-2 d-md-none">
+                                    <a href='/info' className='smallScreenBtn'>Back (Info)</a>
+                                    <a href='/skills' className='smallScreenBtn'>Next (Skills)</a>
+                                </div>
                             </div>
-                        
-                        </section>
+                        </section> 
                     
                         <section className="welcomeScreen section d-sm-block d-md-none">
                         

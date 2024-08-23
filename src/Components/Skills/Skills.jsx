@@ -47,7 +47,7 @@ export default function Skills() {
                                     
                                         <div className="image">
                                         
-                                            {/* <img src={skill} width={100} alt={skillsName[index]} /> */}
+                                            <img src={skill} width={100} alt={skillsName[index]} />
                                         
                                         </div>
                                     

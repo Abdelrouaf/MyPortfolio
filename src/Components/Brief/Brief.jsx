@@ -33,7 +33,7 @@ export default function Brief() {
                             
                                 <div className="image">
                                 
-                                    {/* <img src={profilePic} alt="" /> */}
+                                    <img src={profilePic} alt="" />
                                 
                                 </div>
                             

@@ -20,13 +20,13 @@ export default function Footer() {
                 
                     <div className="social">
                     
-                        <Link target='_blank' to='https://www.facebook.com/abdelrouaf.halaby'><i className="fa-brands fa-facebook-f"></i></Link>
+                        <a target='_blank' rel="noopener noreferrer" to='https://www.facebook.com/abdelrouaf.halaby'><i className="fa-brands fa-facebook-f"></i></a>
                     
-                        <Link target='_blank' to='https://github.com/Abdelrouaf'><i className="fa-brands fa-github"></i></Link>
+                        <a target='_blank' rel="noopener noreferrer" to='https://github.com/Abdelrouaf'><i className="fa-brands fa-github"></i></a>
                     
-                        <Link target='_blank' to='https://wa.me/+201154812462'><i className="fa-brands fa-whatsapp"></i></Link>
+                        <a target='_blank' rel="noopener noreferrer" to='https://wa.me/+201154812462'><i className="fa-brands fa-whatsapp"></i></a>
                     
-                        <Link target='_blank' to='https://www.linkedin.com/in/abdelraouf-halaby-578913235/'><i className="fa-brands fa-linkedin-in"></i></Link>
+                        <a target='_blank' rel="noopener noreferrer" to='https://www.linkedin.com/in/abdelraouf-halaby-578913235/'><i className="fa-brands fa-linkedin-in"></i></a>
                     
                     </div>
                 
