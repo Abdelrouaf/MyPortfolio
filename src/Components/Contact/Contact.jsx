@@ -1,6 +1,7 @@
 import React from 'react';
 import PersonalInformation from '../../Apis/PersonalInformation.json';
 import '../Home/_Home.scss';
+import { Link } from 'react-router-dom';
 
 export default function Contact() {
 
@@ -49,8 +50,8 @@ export default function Contact() {
                     </div>
 
                     <div className="btns d-flex justify-content-center gap-2 d-md-none">
-                        <a href='/info/' className='smallScreenBtn'>Back (Info)</a>
-                        <a href='/skills' className='smallScreenBtn'>Next (Skills)</a>
+                        <Link to='/info/' className='smallScreenBtn'>Back (Info)</Link>
+                        <Link to='/skills' className='smallScreenBtn'>Next (Skills)</Link>
                     </div>
                 </div>
             </section>
