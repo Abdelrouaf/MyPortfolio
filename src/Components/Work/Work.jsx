@@ -43,7 +43,7 @@ export default function Work() {
                                         
                                             <div className="image">
                                             
-                                                <img src={Works.imageCover} alt="" />
+                                                {/* <img src={Works.imageCover} alt="" /> */}
                                             
                                             </div>
                                         

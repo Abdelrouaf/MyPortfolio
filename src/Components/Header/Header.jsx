@@ -38,8 +38,10 @@ export default function Header() {
                         
                             <div className="logo">
                             
-                                <Link className="navbar-brand" onClick={scrollToTop} to="/"><img src={logo} width={100} alt="" /></Link>
+                                {/* <Link className="navbar-brand" onClick={scrollToTop} to="/"><img src={logo} width={100} alt="" /></Link> */}
                             
+                                <Link className="navbar-brand" onClick={scrollToTop} to="/"></Link>
+
                             </div>
                         
                             <div className="menuBtn">

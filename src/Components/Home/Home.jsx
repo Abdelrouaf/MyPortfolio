@@ -168,7 +168,7 @@ export default function Home() {
                                         
                                             <div className="image text-center">
                                             
-                                                <img src={profileImg}  alt="" />
+                                                {/* <img src={profileImg}  alt="" /> */}
                                             
                                                 <div className="followSocial d-flex align-items-center">
                                             
@@ -194,19 +194,19 @@ export default function Home() {
                                 
                                     <div className="shapeOne shape">
                                     
-                                        <img src='/images/shape-1.png' alt="" />
+                                        {/* <img src='/images/shape-1.png' alt="" /> */}
                                     
                                     </div>
                                 
                                     <div className="shapeTwo shape">
                                     
-                                        <img src='/images/shape-2.png' alt="" />
+                                        {/* <img src='/images/shape-2.png' alt="" /> */}
                                     
                                     </div>
                                 
                                     <div className="shapeThree shape">
                                     
-                                        <img src='/images/shape-3.png' alt="" />
+                                        {/* <img src='/images/shape-3.png' alt="" /> */}
                                     
                                     </div>
                                 
@@ -351,7 +351,7 @@ export default function Home() {
                                                     
                                                         <div className="image">
                                                         
-                                                            <img src={skill} width={100} alt={skillsName[index]} />
+                                                            {/* <img src={skill} width={100} alt={skillsName[index]} /> */}
                                                         
                                                         </div>
                                                     
@@ -462,7 +462,7 @@ export default function Home() {
                                                     
                                                         <div className="image">
                                                         
-                                                            <img src={Works.imageCover} alt="" />
+                                                            {/* <img src={Works.imageCover} alt="" /> */}
                                                         
                                                         </div>
                                                     
