@@ -50,7 +50,7 @@ export default function Contact() {
 
                     <div className="btns d-flex justify-content-center gap-2 d-md-none">
                         <a href='/info/' className='smallScreenBtn'>Back (Info)</a>
-                        <a href='/skills/' className='smallScreenBtn'>Next (Skills)</a>
+                        <a href='/skills' className='smallScreenBtn'>Next (Skills)</a>
                     </div>
                 </div>
             </section>
