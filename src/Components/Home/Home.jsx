@@ -1,8 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/splide/css'; 
-import PersonalInformation from '../Apis/PersonalInformation.json'
-import Works from '../Apis/Works.json'
+import PersonalInformation from '../../Apis/PersonalInformation.json'
+import Works from '../../Apis/Works.json'
 import "../Work/_Work.scss"
 import { Link, useLocation } from 'react-router-dom'
 import './_Home.scss'

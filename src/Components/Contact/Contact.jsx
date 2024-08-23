@@ -1,5 +1,5 @@
 import React from 'react';
-import PersonalInformation from '../Apis/PersonalInformation.json';
+import PersonalInformation from '../../Apis/PersonalInformation.json';
 import '../Home/_Home.scss';
 
 export default function Contact() {

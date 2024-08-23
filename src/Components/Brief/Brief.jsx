@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import PersonalInformation from '../Apis/PersonalInformation.json'
+import PersonalInformation from '../../Apis/PersonalInformation.json'
 import '../Home/_Home.scss'
 import { Link } from 'react-router-dom';
 

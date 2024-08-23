@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import Works from '../Apis/Works.json'
-import PersonalInformation from '../Apis/PersonalInformation.json'
+import Works from '../../Apis/Works.json'
+import PersonalInformation from '../../Apis/PersonalInformation.json'
 import "./_Work.scss"
 import { Link, useNavigate } from 'react-router-dom';
 
