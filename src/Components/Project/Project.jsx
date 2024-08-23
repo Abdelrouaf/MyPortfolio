@@ -28,7 +28,7 @@ export default function Project() {
                         
                             <div className="image">
                             
-                                <a target='_blank' rel="noopener noreferrer" href={item.liveDemo}><img src={item.imageCover} alt="" /></a>
+                                <img src={item.imageCover} alt="" />
                             
                                 <div className="demo">
                                 
@@ -38,7 +38,7 @@ export default function Project() {
                             
                             </div>
                         
-                            <h4 className="title">{item.title}</h4>
+                            <a target='_blank' rel="noopener noreferrer" href={item.liveDemo}><h4 className="title">{item.title}</h4></a>
                         
                             <p className="description">{item.description}</p>
                         
