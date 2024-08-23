@@ -14,6 +14,9 @@ export default function Project() {
 
     let navigate = useNavigate();
 
+    console.log(item.imageCover);
+    
+
     return (
     
         <>
@@ -28,7 +31,7 @@ export default function Project() {
                         
                             <div className="image">
                             
-                                <img src={item.imageCover} alt="" />
+                                <img src={item.imageCover} alt={item.title} />
                             
                                 <div className="demo">
                                 
