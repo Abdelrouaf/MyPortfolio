@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react'
-import { Splide, SplideSlide } from '@splidejs/react-splide';
-import '@splidejs/splide/css'; 
+// import { Splide, SplideSlide } from '@splidejs/react-splide';
+// import '@splidejs/splide/css'; 
 import PersonalInformation from '../../Apis/PersonalInformation.json'
 import Works from '../../Apis/Works.json'
 import "../Work/_Work.scss"
@@ -9,7 +9,7 @@ import './_Home.scss'
 
 export default function Home() {
 
-    const [dataWork, setDataWork] = useState(Works);
+    const [dataWork] = useState(Works);
 
     const { name, email, phone, profileImg, title, brief, smallBrief, facebookURL, whatsappURL, linkedinURL, githubURL, skills, skillsName } = PersonalInformation[0];
 

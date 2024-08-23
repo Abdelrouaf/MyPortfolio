@@ -6,7 +6,7 @@ import { Link, useNavigate } from 'react-router-dom';
 
 export default function Work() {
 
-    const [dataWork, setDataWork] = useState(Works);
+    const [dataWork] = useState(Works);
 
     const { email, phone, whatsappURL, linkedinURL, githubURL } = PersonalInformation[0];
 

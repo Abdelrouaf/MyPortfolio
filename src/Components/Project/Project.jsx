@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import Works from '../../Apis/Works.json'
 import PersonalInformation from '../../Apis/PersonalInformation.json'
 import './_Project.scss'

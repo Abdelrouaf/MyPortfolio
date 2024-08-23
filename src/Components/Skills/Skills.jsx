@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import PersonalInformation from '../../Apis/PersonalInformation.json'
 import { Link } from 'react-router-dom'
 import '../Home/_Home.scss'
