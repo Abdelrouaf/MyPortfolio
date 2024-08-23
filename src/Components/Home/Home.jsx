@@ -26,6 +26,9 @@ export default function Home() {
         }
     }, [hash]);
 
+        console.log(profileImg);
+        
+
     // To make first section take margin top 
     useEffect(() => {
         const sections = document.querySelectorAll('section');
