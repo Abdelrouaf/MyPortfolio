@@ -30,8 +30,6 @@ export default function Project() {
                             
                                 {/* <Link target='_blank' to={item.liveDemo}><img src={item.imageCover} alt="" /></Link> */}
                             
-                                <Link target='_blank' to={item.liveDemo}></Link>
-
                                 <div className="demo">
                                 
                                     <i className="fa-solid fa-play"></i>
