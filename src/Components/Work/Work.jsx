@@ -8,7 +8,7 @@ export default function Work() {
 
     const [dataWork, setDataWork] = useState(Works);
 
-    const { id, logo, name, email, phone, address, profileImg, profilePic, title, brief, smallBrief, facebookURL, instagramURL, whatsappURL, linkedinURL, githubURL, skills, skillsName } = PersonalInformation[0];
+    const { email, phone, whatsappURL, linkedinURL, githubURL } = PersonalInformation[0];
 
     let navigate = useNavigate()
 
