@@ -197,19 +197,19 @@ export default function Home() {
                                 
                                     <div className="shapeOne shape">
                                     
-                                        <img src='MyPortfolio/images/shape-1.png' alt="" />
+                                        <img src='images/shape-1.png' alt="" />
                                     
                                     </div>
                                 
                                     <div className="shapeTwo shape">
                                     
-                                        <img src='MyPortfolio/images/shape-2.png' alt="" />
+                                        <img src='images/shape-2.png' alt="" />
                                     
                                     </div>
                                 
                                     <div className="shapeThree shape">
                                     
-                                        <img src='MyPortfolio/images/shape-3.png' alt="" />
+                                        <img src='images/shape-3.png' alt="" />
                                     
                                     </div>
                                 
